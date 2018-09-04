@@ -5,20 +5,11 @@
     android:orientation="vertical"
     android:padding="20dp">
 
-    <Button
-        android:id="@+id/push_stream_btn"
+    <EditText
+        android:id="@+id/url_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="直播（采集编码、rtmp推流）" />
-
-    <Button
-        android:id="@+id/play_stream_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:text="观看直播（播放rtmp流）" />
+        android:hint="请输入网址"/>
 
     <Button
         android:id="@+id/qrcode_btn"
@@ -27,6 +18,18 @@
         android:layout_marginTop="20dp"
         android:padding="10dp"
         android:text="生成二维码" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:paddingLeft="50dip"
+        android:text="请输入需要生成二维码的URL链接"/>
+
+    <ImageView
+        android:id="@+id/img_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

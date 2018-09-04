@@ -16,6 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mPushBtn;
     private Button mPlayBtn;
+    private Button mQrcodeBtn;
     private final int CAMERA_REQUEST_CODE = 1;
     //test github push
 
@@ -25,8 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         mPushBtn = (Button) findViewById(R.id.push_stream_btn);
         mPlayBtn = (Button) findViewById(R.id.play_stream_btn);
+        mQrcodeBtn = (Button) findViewById(R.id.qrcode_btn);
         mPushBtn.setOnClickListener(this);
         mPlayBtn.setOnClickListener(this);
+        mQrcodeBtn.setOnClickListener(this);
         requestPermission();
     }
 
@@ -38,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.play_stream_btn:
                 startActivity(new Intent(this,PlayerActivity.class));
+                break;
+            case R.id.qrcode_btn:
+                startActivity(new Intent(this,QrcodeActivity.class));
                 break;
         }
     }

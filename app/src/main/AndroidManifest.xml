@@ -45,6 +45,9 @@
         <activity
             android:name=".PlayerActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".QrcodeActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 
