@@ -73,6 +73,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             Toast.makeText(this, "相机权限已申请", Toast.LENGTH_SHORT).show();
         }
+
+        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{
+                    android.Manifest.permission.RECORD_AUDIO},1);
+        }
     }
 
     @Override

@@ -3,6 +3,7 @@ package net.ossrs.yasea;
 import android.media.AudioRecord;
 import android.media.audiofx.AcousticEchoCanceler;
 import android.media.audiofx.AutomaticGainControl;
+import android.util.Log;
 
 import com.github.faucamp.simplertmp.RtmpHandler;
 import com.seu.magicfilter.utils.MagicFilterType;
@@ -31,6 +32,8 @@ public class SrsPublisher {
     private SrsFlvMuxer mFlvMuxer;
     private SrsMp4Muxer mMp4Muxer;
     private SrsEncoder mEncoder;
+
+    private static final String TAG = "LiveTest";
 
     public SrsPublisher(SrsCameraView view) {
         mCameraView = view;
@@ -95,6 +98,7 @@ public class SrsPublisher {
                 while (!Thread.interrupted()) {
                     if (sendVideoOnly) {
                         mEncoder.onGetPcmFrame(mPcmBuffer, mPcmBuffer.length);
+                        Log.i("LiveTest","sendVideoOnly");
                         try {
                             // This is trivial...
                             Thread.sleep(20);
