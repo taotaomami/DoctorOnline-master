@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mPushBtn;
     private Button mPlayBtn;
     private final int CAMERA_REQUEST_CODE = 1;
+    //test github push
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
